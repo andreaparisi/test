@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+    	<style type="text/css">
+		.auto-style1 {
+			font-size: xx-large;
+		}
+		.auto-style2 {
+			font-size: large;
+			color: #000000;
+		}
+		.auto-style3 {
+			color: #E91C1C;
+		}
+		.auto-style4 {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 50px;
+			width: 225px;
+			margin-left: -198px;
+			margin-right: 0px;
+			margin-top: -90px;
+			margin-bottom: 0px;
+			padding-left: 170px;
+			padding-right: 0px;
+			padding-top: 75px;
+			padding-bottom: 75px;
+			background: url('img/logo.png') no-repeat left center;
+		}
+		.auto-style5 {
+			border: 3px solid #FFFF00;
+			background-color: #E91C1C;
+		}
+		.auto-style6 {
+	color: #000000;
+}
+		</style>
+    </head>
+    <body>
+        <div class="auto-style4" style="left: 37%; top: 50%; width: 287px">
+            <h1 class="auto-style3"><span class="auto-style6">Andrea Push</span> </h1>
+            <p class="auto-style2">This application is only created for&nbsp; service demostration.</p>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+                            </div>
+             
+            <br>
+<br>
+             
+<br>           
+        <br>
+        <br>
+        <br>
+          
+
+       <button onclick="nome()" class="auto-style1" style="width: 161px">Inserisci il tuo nome(solo la 1 volta)</button>
+
+
+
+			<!--<input type="text" id="txtTag" value="Inserisci il tuo nome" class="auto-style1" style="width: 338px" name="nome">-->
+
+            
+
+            
+          <!-- <button onclick="addLibraFilter()" class="auto-style1" style="width: 160px">Registra il tuo nome</button>-->
+
+            
+            <br>           
+<br>
+<br>           
+<br>
+<br>           
+            
+			<table  class="auto-style5" style="width: 100%">
+				<tr>
+					<td>
+
+
+           <button onclick="addHotelFilter()" class="auto-style1" style="width: 161px">Ricevi offerte Hotel</button>
+
+					</td>
+					<td>
+
+
+
+
+
+
+
+            <button onclick="getPushByDevice()"    class="auto-style1" style="width: 160px">Leggi mex</button>
+
+
+					</td>
+					<td>
+
+
+
+
+
+
+
+
+
+            <button onclick="window.plugins.socialsharing.share('Ricevi offerte sul tuo smartphone', null, null, 'https://play.google.com/store/apps/details?id=com.pushtest.andrea')" class="auto-style1" style="width: 161px">&nbsp;condividi 
+			sui social network</button>
+
+
+            		</td>
+				</tr>
+				<tr>
+					<td>
+              <button onclick="window.plugins.socialsharing.shareViaFacebook('Ricevi offerte news sul tuo smartphone,https://play.google.com/store/apps/details?id=com.pushtest.andrea ', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})" class="auto-style1" style="width: 161px">Messaggio via Facebook </button>
+
+
+            		</td>
+					<td><button onclick="radio()" class="auto-style1" style="width: 161px">Ascolta la Radio</button>
+</td>
+					<td>
+
+              <button onclick="window.plugins.socialsharing.shareViaWhatsApp('Ricevi offerte news sul tuo smartphone,https://play.google.com/store/apps/details?id=com.pushtest.andrea ', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})" class="auto-style1" style="width: 161px">Messaggio via Whatsapp </button>
+
+                        </td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><button onclick="voce()" class="auto-style1" style="width: 240px">Aiuto vocale,  poi dai il comando vocale ok google, dopo trova bar</button>
+</td>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+            
+<br>
+
+
+<br>
+<br>
+<br>
+
+
+
+                <br>
+            <br>
+             <br>
+
+                        <!-- REMOVE THIS SECTION -->
+        </div>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/PushipNotification.js"></script>
+        <script type="text/javascript" src="js/SocialSharing.js"></script>
+        
+        <script type="text/javascript">
+
+		app.initialize();
+
+		//REMOVE THIS SECTION
+
+
+function voce() {
+navigator.notification.beep(1);
+
+
+window.OpenApplication("com.google.android.googlequicksearchbox");
+
+
+}
+
+
+
+
+function tts() {
+
+window.plugins.tts.speak("prova lettura testo");
+}
+
+
+
+
+
+
+
+function nome() {
+        
+        var person = prompt("Inserisci il tuo nome", "");
+        if (person !=null) {
+               
+        Puship.Common.AddTagFilter(person);   
+        }
+        
+        }
+    
+
+
+
+
+
+
+function radio() {
+            playAudio("http://mp3.kataweb.it:8000/RadioDeejay");
+        }
+
+        // Audio player
+        //
+        var my_media = null;
+        var mediaTimer = null;
+
+        // Play audio
+        //
+        function playAudio(src) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+
+            // Play audio
+            my_media.play();
+
+            // Update my_media position every second
+            if (mediaTimer == null) {
+                mediaTimer = setInterval(function() {
+                    // get my_media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition((position) + " sec");
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                            setAudioPosition("Error: " + e);
+                        }
+                    );
+                }, 1000);
+            }
+        }
+
+        // Pause audio
+        // 
+        function pauseAudio() {
+            if (my_media) {
+                my_media.pause();
+            }
+        }
+
+        // Stop audio
+        // 
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+
+        // onSuccess Callback
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+
+        // onError Callback 
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' + 
+                  'message: ' + error.message + '\n');
+        }
+
+        // Set audio position
+        // 
+        function setAudioPosition(position) {
+            document.getElementById('audio_position').innerHTML = position;
+        }
+
+
+
+
+
+
+
+
+		function sound() {
+        navigator.notification.beep(1);
+    }
+
+
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+
+
+
+
+		function getPushByHotel(){
+			Puship.Common.GetPushMessages(
+	        	{
+					//limit: 10, //max limit is 50 default is 20
+	   				//offset: 100,
+	   				tag: "Hotel",
+					successCallback: function (regresult){
+		                console.log("GetPushMessages done");
+		                
+		                if (regresult.length>0)
+	                	{
+		                	alert("Message 1 of "+regresult.length+": "+regresult[0].Message);
+	                	}else{
+	                		alert("Non ci sono offerte");
+	                	}
+					},
+					failCallback: function (regresult){
+						console.log("error during GetPushMessages: "+ regresult);
+						alert("error during GetPushMessages: "+ regresult);
+					}
+				});
+		}
+
+		
+		
+		
+		function getPushByCurrentPosition(){
+			Puship.Common.GetPushMessages(
+	        	{
+					//limit: 10, //max limit is 50 default is 20
+	   				//offset: 100,
+	   				byCurrentPosition: true,
+					successCallback: function (regresult){
+		                console.log("GetPushMessages done");
+		                
+		                if (regresult.length>0)
+	                	{
+		                	alert("Message 1 of "+regresult.length+": "+regresult[0].Message);
+	                	}else{
+	                		alert("No message found");
+	                	}
+					},
+					failCallback: function (regresult){
+						console.log("error during GetPushMessages by Pos: "+ regresult);
+						alert("error during GetPushMessages by Pos: "+ regresult);
+					}
+				});
+		}
+		
+		function getPush(){
+			Puship.Common.GetPushMessages(
+	        	{
+					//limit: 10, //max limit is 50 default is 20
+	   				//offset: 100,
+					successCallback: function (regresult){
+		                console.log("GetPushMessages done");
+		                
+		                if (regresult.length>0)
+	                	{
+		                	alert("Message 1 of "+regresult.length+": "+regresult[0].Message);
+	                	}else{
+	                		alert("No message found");
+	                	}
+					},
+					failCallback: function (regresult){
+						console.log("error during GetPushMessages: "+ regresult);
+						alert("error during GetPushMessages: "+ regresult);
+					}
+				});
+		}
+		
+		function getPushByLibra(){
+			Puship.Common.GetPushMessages(
+	        	{
+					//limit: 10, //max limit is 50 default is 20
+	   				//offset: 100,
+	   				tag: "Libra",
+					successCallback: function (regresult){
+		                console.log("GetPushMessages done");
+		                
+		                if (regresult.length>0)
+	                	{
+		                	alert("Message 1 of "+regresult.length+": "+regresult[0].Message);
+	                	}else{
+	                		alert("No message found");
+	                	}
+					},
+					failCallback: function (regresult){
+						console.log("error during GetPushMessages: "+ regresult);
+						alert("error during GetPushMessages: "+ regresult);
+					}
+				});
+		}
+		
+		
+		
+		function getPushByDevice(){
+		
+		
+			Puship.Common.GetPushMessagesByDevice(
+	       	
+	        	
+	        	{
+					//limit: 10, //max limit is 50 default is 20
+	   				//offset: 100,
+					successCallback: function (regresult){
+		                console.log("GetPushMessagesByDevice done");
+		                
+		                if (regresult.length>0)
+	                	{
+		                	alert("Message 1 of "+regresult.length+": "+regresult[0].Message);
+	                	}else{
+	                		alert("Non ci sono mex");
+	                	}
+					},
+					
+				
+					failCallback: function (regresult){
+						console.log("error during GetPushMessagesByDevice: "+ regresult);
+						alert("error during GetPushMessagesByDevice: "+ regresult);
+					}
+				});
+				
+				 {
+        navigator.notification.beep(1);
+    }
+
+    
+    {
+        navigator.notification.vibrate(2000);
+    }
+     
+
+		}
+		
+		
+    
+		
+		
+		
+		
+		function addLibraFilter(){
+			console.log("addLibraFilter");
+			var tag = document.getElementById('txtTag').value;
+			Puship.Common.AddTagFilter(tag);
+			{
+        navigator.notification.beep(1);
+    }
+
+			{
+        navigator.notification.vibrate(2000);
+    }
+
+			
+			
+		}
+		function addHotelFilter(){
+			console.log("addHotelFilter");
+			Puship.Common.AddTagFilter("Hotel");
+			{
+        navigator.notification.beep(1);
+    }
+
+			{
+        navigator.notification.vibrate(2000);
+    }
+
+			
+			
+			
+			
+		}
+		function removeFilter(){
+			console.log("removeFilter");
+			Puship.Common.RemoveTagFilter("Libra");
+		}
+		function clearFilters(){
+			console.log("removeFilter");
+			Puship.Common.CleanTagFilter();
+			{
+        navigator.notification.beep(1);
+    }
+
+			{
+        navigator.notification.vibrate(2000);
+    }
+
+			
+			
+			
+			
+		}
+		function getFilters(){
+			Puship.Common.GetTagFilters(
+	        	{
+					successCallback: function (regresult){
+		                console.log("GetTagFilters done");
+		                
+		                if (regresult.length>0)
+	                	{
+		                	alert("Filter 1 of "+regresult.length+": "+regresult[0]);
+	                	}else{
+	                		alert("No filter found");
+	                	}
+					},
+					failCallback: function (regresult){
+						console.log("error during GetTagFilters: "+ regresult);
+						alert("error during GetTagFilters: "+ regresult);
+					}
+				});
+				
+				{
+        navigator.notification.beep(1);
+    }
+
+			{
+        navigator.notification.vibrate(2000);
+    }
+
+				
+				
+		}
+		
+		function registerCurrentPosition(){
+			console.log("RegisterCurrentPosition");
+			Puship.Common.RegisterCurrentPosition(
+					{
+					successCallback: function (regresult){
+		                console.log("Position registration done");
+					},
+					failCallback: function (regresult){
+						console.log("Position registration error: "+ regresult);
+					}
+				});		
+								
+				
+		}
+		// REMOVE THIS SECTION
+        </script>
+    </body>
+</html>
