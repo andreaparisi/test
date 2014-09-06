@@ -183,41 +183,7 @@
 		// versione di test debug prove test
 		
 	//
-
-function deletePush() {
-		Puship.Common.GetPushMessagesByDevice(
-		            {
-		                //limit: 10, //max limit is 50 default is 20
-		                //offset: 100,
-		                successCallback: function (regresult) {
-		                    console.log("GetPushMessagesByDevice done");
-		
-		                    if (regresult.length > 0) {
-		                        console.log("deleting: " + regresult[0].PushMessageId);
-		                        Puship.Common.DeletePushMessage(regresult[0].PushMessageId, {
-		                            successCallback: function (delresult) {
-		                                console.log("Message deleted");
-		                                navigator.notification.alert("Message with id " + regresult[0].PushMessageId + " deleted");
-		                            },
-		                            failCallback: function (delresult) {
-		                                console.warn("error during DeletePushMessage: " + regresult);
-		                                navigator.notification.alert("error during message delete: " + regresult);
-		                            }
-		                        });
-		
-		
-		                        //
-		
-		                    } else {
-		                        navigator.notification.alert("Non ci sono mex da cancellare");
-		                    }
-		                },
-		                failCallback: function (regresult) {
-		                    console.warn("error during GetPushMessages: " + regresult);
-		                    navigator.notification.alert("error during GetPushMessages: " + regresult);
-		                }
-		            });
-		}	
+	
 	
 	
 
