@@ -147,7 +147,8 @@
                         </td>
 				</tr>
 				<tr>
-					<td>&nbsp;</td>
+					<td><td><button onclick="facebook()" class="auto-style1" style="width: 161px">Facebook</button>
+</td>
 					<td><button onclick="voce()" class="auto-style1" style="width: 240px">Aiuto vocale,  poi dai il comando vocale ok google, dopo trova bar</button>
 </td>
 					<td><button onclick="web()" class="auto-style1" style="width: 161px">Naviga in Internet</button>
@@ -185,8 +186,25 @@
 	//
 	
 function web ()	 {
-var ref = window.open('http://www.google.it', '_blank', 'location=yes');	
+var ref = window.open('http://www.google.it', '_blank', 'location=yes');
+{
+navigator.notification.beep(1);
+    }	
 }
+
+
+
+function facebook () {
+var ref = window.open('http://www.facebook', '_blank', 'location=yes');	
+{
+navigator.notification.beep(1);
+    }	
+}
+
+
+
+
+
 
 function voce() {
 navigator.notification.beep(1);
