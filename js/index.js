@@ -76,7 +76,7 @@ var app = {
  if (result == TTS.STARTED) {
   //Ready to go
  }
-}
+};
 			
 			window.plugins.tts.speak("The text to speech service is ready");
 			
