@@ -62,7 +62,7 @@
     <!-- Third party plugins -->
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
-    <gap:plugin name="org.apache.cordova.plugins.tts" value="org.apache.cordova.plugins.tts"/>
+    <gap:plugin name="org.tt.plugin.tts" version="1" />
     <gap:plugin name="technology.kulak.cordova.appopen" version="0.1.0" />
     
 
