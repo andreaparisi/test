@@ -475,7 +475,7 @@ function radio() {
 		function addLibraFilter(){
 			console.log("addLibraFilter");
 			var tag = document.getElementById('txtTag').value;
-			Puship.Common.AddTagFilter(tag,{removePrevTag: true});
+			Puship.Common.AddTagFilter(tag);
 			{
         navigator.notification.beep(1);
     }
