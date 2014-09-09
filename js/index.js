@@ -60,30 +60,12 @@ var app = {
 			successCallback: function (pushipresult)
             {	
 			
-			
-			
-			//test tts
-			
-			
-			window.plugins.tts.startup(startupWin, fail);
-			
-			
-			
-			
-			
-			function startupWin(result) {
- // When result is equal to STARTED we are ready to play
- if (result == TTS.STARTED) {
-  //Ready to go
- }
-};
-			
-			window.plugins.tts.speak("The text to speech service is ready");
-			
+						
 			
 			
 			// start read mex
 			
+
 			Puship.Common.GetPushMessagesByDevice(
 
 
