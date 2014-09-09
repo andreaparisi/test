@@ -51,7 +51,7 @@ var app = {
         
 	Puship.PushipAppId = "3zfk1YxR6zuPJ6w"; // Replace this with your Puship Application ID
 	
-	Puship.EnableLog=true; // Enable/Disable the Puship internal logger (default is false)
+	Puship.EnableLog=false; // Enable/Disable the Puship internal logger (default is false)
 	
 	if (Puship.Common.GetCurrentOs()==Puship.OS.ANDROID){
 		var GCMCode = "66300571811"; // Replace this with your google senderID
@@ -61,9 +61,6 @@ var app = {
             {	
 			
 						
-			
-			
-			// start read mex
 			
 
 			Puship.Common.GetPushMessagesByDevice(
