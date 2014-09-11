@@ -62,7 +62,7 @@
     <!-- Third party plugins -->
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
-    <gap:plugin name="org.tt.plugin.tts" version="1" />
+    <gap:plugin name="com.geotab.phonegap.tts" version="0.0.1" />
     <gap:plugin name="technology.kulak.cordova.appopen" version="0.1.0" />
     
 
